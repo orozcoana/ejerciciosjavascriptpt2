@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculo de sueldo</title>
+</head>
+<body>
+    <h1>Calculo de sueldo</h1>
+    <script>
+        var valorhora = parseFloat(prompt('Introduzca el valor de la hora trabajada'));
+        var horasmes = parseFloat(prompt('Introduzca la cantidad de horas trabajadas en el mes'));
+        var antiguedad = parseFloat(prompt('Introduzca los a~os de antiguedad'));
+        var sueldobrutomes = valorhora * horasmes;
+        var bonificacionantiguedad = (antiguedad * sueldobrutomes * 5 / 100);
+        var sueldonetomes = sueldobrutomes + bonificacionantiguedad;
+        var sueldoanual = sueldonetomes * 12;
+        var textoamostrar = '<p> El sueldo mensual es ' + sueldonetomes + ' </p> <p> El sueldo anual es ' + sueldoanual + ' </p>';
+        document.write(textoamostrar);
+    </script>
+</body>
+</html>

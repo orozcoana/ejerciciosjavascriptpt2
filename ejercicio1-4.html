@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Valor Promedio Hora trabajada</title>
+</head>
+<body>
+    <h1>Valor Promedio Hora trabajada</h1>
+    <script>
+        var valorhora = parseFloat(prompt('Introduzca el valor de la hora trabajada'));
+        var horasmes = parseFloat(prompt('Introduzca la cantidad de horas trabajadas en el mes'));
+        var antiguedad = parseFloat(prompt('Introduzca los a~os de antiguedad'));
+        var cantidadvendidos = parseFloat(prompt('Introduzca la cantidad de seguros vendidos'));
+        var segurocaro = parseFloat(prompt('Introduzca el valor del seguro mas caro vendido'));
+        var sueldobrutomes = valorhora * horasmes;
+        var asignaciones = (segurocaro * 50 / 100) + (sueldobrutomes * (20 / 100) * cantidadvendidos) + (antiguedad * sueldobrutomes * 10 / 100);
+        var sueldonetomes = sueldobrutomes + asignaciones;
+        var valorpromediohora = sueldonetomes / horasmes;
+        var textoamostrar = '<p> El valor promedio de la hora es ' + valorpromediohora + ' </p>';
+        document.write(textoamostrar);
+    </script>
+</body>
+</html>

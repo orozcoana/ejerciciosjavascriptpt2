@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pares e impares</title>
+</head>
+<body>
+    <h1>Pares e impares</h1>
+    <script>
+        var numero = parseInt(prompt('Por favor introduzca un numero entero'));
+        var textoamostrar;
+       if(numero == 0){
+            textoamostrar = 'El numero es cero';
+       } else {
+            var modulo = numero % 2;
+            if(modulo == 0){
+                textoamostrar = 'El numero es par';
+            } else {
+                textoamostrar = 'El numero es impar';
+            }
+       }
+       document.write(textoamostrar);
+    </script>
+</body>
+</html>

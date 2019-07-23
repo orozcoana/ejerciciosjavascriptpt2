@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pares e impares</title>
+</head>
+<body>
+    <h1>Pares e impares</h1>
+    <script>
+        var numero = parseInt(prompt('Por favor introduzca un numero entero'));
+        var textoamostrar;
+        var multiplotres = (numero % 3) == 0;
+        var multiplocinco = (numero % 5) == 0;
+        if(multiplocinco && multiplotres){
+            textoamostrar = 'El numero es multiplo de 3 y de 5';
+        } else if(multiplocinco && !multiplotres){
+            textoamostrar = 'El numero es multiplo de 5';
+        }
+        else if(!multiplocinco && multiplotres){
+            textoamostrar = 'El numero es multiplo de 3';
+        }else{
+            textoamostrar = 'El numero no es multiplo de 5 ni de 3';
+        }
+
+       document.write(textoamostrar);
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculo de sueldo</title>
+</head>
+<body>
+    <h1>Calculo de sueldo</h1>
+    <script>
+        var sueldobrutomes = parseFloat(prompt('Introduzca el sueldo basico mensual'));
+        var cantidadvendidos = parseFloat(prompt('Introduzca la cantidad de seguros vendidos'));
+        var segurocaro = parseFloat(prompt('Introduzca el valor del seguro mas caro vendido'));
+       
+        var asignaciones = (segurocaro * 25 / 100) + (sueldobrutomes * (15 / 100) * cantidadvendidos);
+        var sueldonetomes = sueldobrutomes + asignaciones;
+       
+        var textoamostrar = '<p> El sueldo mensual es ' + sueldonetomes + ' </p>';
+        document.write(textoamostrar);
+    </script>
+</body>
+</html>

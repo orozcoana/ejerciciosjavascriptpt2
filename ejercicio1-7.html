@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pares e impares (Rango)</title>
+</head>
+<body>
+    <h1>Pares e impares (Rango)</h1>
+    <script>
+        
+        var limiteinferior = parseInt(prompt('Por favor introduzca el limite inferior de un rango'));
+        var limitesuperior = parseInt(prompt('Por favor introduzca el limite superior del rango'));
+        var textoamostrar;
+        if(limitesuperior - limiteinferior >= 5){
+            var numero = parseInt(prompt('Por favor introduzca un numero que se encuentre en el rango'));
+                      
+            var dentrorango = limiteinferior <= numero && numero <= limitesuperior;
+
+            var espar = (numero % 2) == 0;
+
+            if(dentrorango ){
+                
+                textoamostrar = 'El numero esta dentro del rango.';
+                if(espar){
+                    textoamostrar = textoamostrar + ' El numero es par'
+                }
+            }else{
+                textoamostrar = 'El numero esta fuera del rango';
+                if(!espar){
+                    textoamostrar = textoamostrar + ' El numero es impar'
+                }
+            }
+        } else {
+            textoamostrar = 'El rango debe ser mayor o igual a 5 (La diferencia entre el limite superior e inferior no debe ser menor a 5)';
+        }
+        
+
+       document.write(textoamostrar);
+    </script>
+</body>
+</html>
